@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.AppWidget.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.AppWidget.AppWidgetContainer">
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:contentDescription="@string/appwidget_text"
+
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"/>
+
+
+    <ImageView
+        android:id="@+id/imgRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appwidget_text"
+        android:src="@drawable/ic_refresh"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_below="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/imgRefresh"
+        android:layout_toEndOf="@+id/imgRefresh"
+        tools:text="13:00:00"
+        android:padding="5dp"
+      />
+</RelativeLayout>
